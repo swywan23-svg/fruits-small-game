@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>水果失控</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hud">
+        <div class="hud-item"><span class="label" id="labelStage">关卡</span><span id="stage">1</span></div>
+        <div class="hud-item"><span class="label" id="labelTarget">目标</span><span id="target">-</span></div>
+        <div class="hud-item"><span class="label" id="labelCount">场上</span><span id="count">0/100</span></div>
+        <div class="hud-item unlocks"><span class="label" id="labelUnlocked">已解锁</span><span id="unlocked">🍉</span></div>
+        <button id="sfxBtn" class="btn">音效：开</button>
+        <button id="pauseBtn" class="btn">暂停</button>
+        <button id="restartBtn" class="btn">重开</button>
+      </header>
+
+      <main class="game-wrap">
+        <canvas id="gameCanvas" aria-label="Fruit Collapse Canvas"></canvas>
+        <div id="stageBanner" class="stage-banner hidden"></div>
+        <div id="pausedOverlay" class="paused-overlay hidden">已暂停</div>
+        <div id="overlay" class="overlay hidden" role="dialog" aria-live="polite">
+          <h1 id="gameOverTitle">游戏结束</h1>
+          <p id="finalStage">到达关卡：1</p>
+          <button id="overlayRestartBtn" class="btn">重开</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
